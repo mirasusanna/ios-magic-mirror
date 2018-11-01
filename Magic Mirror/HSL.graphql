@@ -1,0 +1,19 @@
+
+query getNextDepartures($stationId: String!, $numberOfDepartures: Int) {
+    station(id: $stationId) {
+        name
+        stoptimesWithoutPatterns(numberOfDepartures: $numberOfDepartures) {
+            stop {
+                platformCode
+            }
+            scheduledArrival
+            scheduledDeparture
+            trip {
+                route {
+                    shortName
+                }
+            }
+            headsign
+        }
+    }
+}
