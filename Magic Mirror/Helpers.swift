@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class Helpers {
+    
+    // Return formatted Dates
+    static func getFormattedDate(day:Date, format:String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        let weekday = formatter.string(from: day)
+        return weekday
+    }
+}
