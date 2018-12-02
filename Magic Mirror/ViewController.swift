@@ -41,6 +41,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDa
         Settings.shared.registerSettingsBundle()
         Settings.shared.updateDisplayFromDefaults()
         
+        createUser()
+        getUsers()
+        
         // Update clock and date
         self.currentTime.text = "\(Helpers.getFormattedDate(day:clock.currentTime, format:"hh:mm"))"
         self.day.text = Helpers.getFormattedDate(day: Date(), format:"EEEE, MMM d")
@@ -70,7 +73,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDa
         // Update next departures once a minute
         transportTimer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(self.updateTransport), userInfo: nil, repeats: true)
         
-        // Update next departures once every 30 minutes
+        // Update news once every 30 minutes
         newsTimer = Timer.scheduledTimer(timeInterval: 1800, target: self, selector: #selector(self.updateNews), userInfo: nil, repeats: true)
         
         // Update clock every second
@@ -162,5 +165,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDa
                 }
             }
         }
+    }
+    
+    func createUser() {
+        let user = User(context: PersistenceManager.shared.context)
+        user.name = "Riku"
+        PersistenceManager.shared.saveContext()
+    }
+    
+    func getUsers() {
+        let users = PersistenceManager.shared.fetch(User.self)
+        users.forEach({ print($0.name) })
     }
 }

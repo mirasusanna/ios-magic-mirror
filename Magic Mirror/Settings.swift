@@ -27,4 +27,12 @@ class Settings {
         print(asd)
     }
 
+    func getNewsCountry() -> String {
+        let defaults = UserDefaults.standard
+        if (defaults.string(forKey: "news_country") != nil) {
+            return defaults.string(forKey: "news_country")!
+        }
+        return "us"
+    }
+
 }

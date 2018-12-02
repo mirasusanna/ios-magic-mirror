@@ -31,6 +31,7 @@
 		91EACB7D2189EDFB00F1D4C8 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EACB7C2189EDFB00F1D4C8 /* Helpers.swift */; };
 		91EACB86218B6F7000F1D4C8 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EACB85218B6F7000F1D4C8 /* SettingsController.swift */; };
 		91EACB88218B742D00F1D4C8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91EACB87218B742D00F1D4C8 /* Settings.bundle */; };
+		91FE4B3621B3D6E3007C0F61 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FE4B3521B3D6E3007C0F61 /* News.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		91EACB7C2189EDFB00F1D4C8 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		91EACB85218B6F7000F1D4C8 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		91EACB87218B742D00F1D4C8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		91FE4B3521B3D6E3007C0F61 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		A318B3121E02FA8256C23323 /* Pods-Magic MirrorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic MirrorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Magic MirrorUITests/Pods-Magic MirrorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF9BB8055D16E1F50D680EC9 /* Pods-Magic Mirror.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic Mirror.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Magic Mirror/Pods-Magic Mirror.debug.xcconfig"; sourceTree = "<group>"; };
 		C44DD3D989CA876A8F30FB68 /* Pods_Magic_Mirror.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magic_Mirror.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 				91A1F00F21AB11EB006B02E1 /* Transportation.swift */,
 				91A1F01121AB21C5006B02E1 /* Settings.swift */,
 				91A1F01721B09110006B02E1 /* PersistenceManager.swift */,
+				91FE4B3521B3D6E3007C0F61 /* News.swift */,
 			);
 			path = "Magic Mirror";
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				91EACB462188CB5B00F1D4C8 /* Magic_Mirror.xcdatamodeld in Sources */,
 				91A1F01621B090AE006B02E1 /* User+CoreDataProperties.swift in Sources */,
 				91EACB402188CB5B00F1D4C8 /* ViewController.swift in Sources */,
+				91FE4B3621B3D6E3007C0F61 /* News.swift in Sources */,
 				91EACB7D2189EDFB00F1D4C8 /* Helpers.swift in Sources */,
 				91A1F01821B09110006B02E1 /* PersistenceManager.swift in Sources */,
 				91A1F01221AB21C5006B02E1 /* Settings.swift in Sources */,

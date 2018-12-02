@@ -8,6 +8,16 @@
 import Foundation
 import CoreData
 
+public extension NSManagedObject {
+    
+    convenience init(context: NSManagedObjectContext) {
+        let name = String(describing: type(of: self))
+        let entity = NSEntityDescription.entity(forEntityName: name, in: context)!
+        self.init(entity: entity, insertInto: context)
+    }
+    
+}
+
 final class PersistenceManager {
     
     private init() {}
@@ -56,6 +66,19 @@ final class PersistenceManager {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+    
+    func fetch<T: NSManagedObject>(_ objectType: T.Type) -> [T] {
+        let entityName = String(describing: objectType)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        // handle throwing, return empty array
+        do {
+            let fetchedObjects = try! context.fetch(fetchRequest) as? [T]
+            return fetchedObjects ?? [T]()
+        } catch {
+            print(error)
+            return [T]()
         }
     }
     

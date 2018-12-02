@@ -8,15 +8,32 @@
 
 import UIKit
 
-class SettingsController: UITableViewController {
+class SettingsController: UITableViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var weatherApiKeyField: UITextField!
+    @IBOutlet weak var defaultCityField: UITextField!
+    @IBOutlet weak var numberOfDaysField: UITextField!
+    @IBOutlet weak var locationSwitch: UISwitch!
+    @IBOutlet weak var newsApiKeyField: UITextField!
+    
     let defaults = UserDefaults.standard
     
-    @IBOutlet weak var weatherApiKey: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let weatherApiKey = defaults.string(forKey: "weather_api_key")
+        weatherApiKeyField.text = weatherApiKey
+        
+        let defaultCity = defaults.string(forKey: "weather_api_key")
+        defaultCityField.text = defaultCity
+        
+        let newsApiKey = defaults.string(forKey: "news_api_key")
+        newsApiKeyField.text = newsApiKey
     }
     
+    @IBAction func saveSettings(_ sender: Any) {
+        
+    }
     /*
     // MARK: - Navigation
 

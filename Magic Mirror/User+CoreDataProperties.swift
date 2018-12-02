@@ -1,9 +1,8 @@
 //
 //  User+CoreDataProperties.swift
-//  Magic Mirror
+//  
 //
-//  Created by Hiltunen on 29/11/2018.
-//  Copyright © 2018 Hiltunen. All rights reserved.
+//  Created by Hiltunen on 02/12/2018.
 //
 //
 
@@ -17,5 +16,6 @@ extension User {
         return NSFetchRequest<User>(entityName: "User")
     }
 
+    @NSManaged public var name: String?
 
 }
